@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibas Bista | Content Creator & Educator</title>
+    <title>Bibash Bista | Official Website</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
 
         :root {
             --primary: #0f172a;
             --accent-blue: #00d2ff;
-            --accent-pink: #ff0050; /* TikTok Pink */
+            --accent-pink: #ff0050;
             --gold: #f1c40f;
-            --glass: rgba(255, 255, 255, 0.05);
+            --glass: rgba(255, 255, 255, 0.04);
         }
 
         body {
@@ -21,12 +21,13 @@
             background-color: var(--primary);
             color: white;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Animated Background */
+        /* Hero Image Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 1)), 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 1)), 
                         url('hero.jpg');
             background-size: cover;
             background-position: center;
@@ -39,80 +40,93 @@
             padding: 20px;
         }
 
-        .hero h1 { font-size: clamp(3rem, 10vw, 5rem); margin: 0; font-weight: 700; }
-        .hero p { color: var(--gold); letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem; }
+        .hero h1 { font-size: clamp(3.5rem, 12vw, 6rem); margin: 0; font-weight: 700; letter-spacing: -2px; }
+        .hero p { color: var(--gold); letter-spacing: 6px; text-transform: uppercase; font-size: 0.9rem; font-weight: 700; }
 
-        /* Social Button Container */
-        .social-links {
+        /* Social Link Buttons */
+        .social-buttons {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
         .btn {
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: 0.3s;
-            font-size: 0.9rem;
+            transition: all 0.4s ease;
+            font-size: 1rem;
         }
 
-        .btn-yt { background: #ff0000; color: white; }
+        .btn-yt { background: #ff0000; color: white; box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3); }
         .btn-tk { background: #000; color: white; border: 1px solid var(--accent-pink); }
-        .btn-wa { background: #25d366; color: white; }
+        .btn-wa { background: #25d366; color: white; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
 
-        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); filter: brightness(1.2); }
 
-        /* Content Section */
+        /* Information Card */
         .main-card {
-            max-width: 800px;
-            margin: -50px auto 100px;
+            max-width: 900px;
+            margin: -60px auto 80px;
             background: var(--glass);
-            backdrop-filter: blur(25px);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
             border: 1px solid rgba(255,255,255,0.1);
-            padding: 50px;
+            padding: 60px 40px;
             border-radius: 40px;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.7);
         }
 
-        .mission-grid {
+        .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-top: 50px;
         }
 
-        .mission-item h3 { color: var(--accent-blue); margin-bottom: 10px; }
-        .mission-item p { opacity: 0.8; line-height: 1.6; font-size: 1rem; }
+        .grid-item h3 { color: var(--accent-blue); font-size: 1.5rem; margin-bottom: 15px; }
+        .grid-item p { opacity: 0.8; line-height: 1.8; font-size: 1.1rem; font-weight: 300; }
 
         .contact-footer {
-            margin-top: 50px;
+            margin-top: 60px;
             text-align: center;
+            padding-top: 40px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
         }
 
-        .phone { font-size: 1.5rem; color: var(--gold); text-decoration: none; font-weight: 700; }
+        .phone-num { 
+            font-size: 2.2rem; 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: block;
+            margin: 10px 0;
+            transition: 0.3s;
+        }
+        
+        .phone-num:hover { color: var(--gold); }
 
         @media (max-width: 768px) {
-            .mission-grid { grid-template-columns: 1fr; }
-            .main-card { padding: 30px; margin: -50px 15px 100px; }
+            .grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3.5rem; }
+            .main-card { padding: 40px 20px; margin: -50px 20px 80px; }
+            .phone-num { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <p>Madane, Gulmi | Traveler</p>
-        <h1>Bibas Bista</h1>
+        <p>Madane, Gulmi | Traveler & Vlogger</p>
+        <h1>Bibash Bista</h1>
         
-        <div class="social-links">
+        <div class="social-buttons">
             <a href="https://www.youtube.com/@BibashBista-b7p" target="_blank" class="btn btn-yt">YouTube</a>
             <a href="https://tiktok.com/@bibashbista3" target="_blank" class="btn btn-tk">TikTok</a>
             <a href="https://wa.me/9779867102729" class="btn btn-wa">WhatsApp</a>
@@ -120,30 +134,33 @@
     </section>
 
     <div class="main-card">
-        <div style="text-align: center; margin-bottom: 40px;">
-            <h2 style="font-size: 2rem; margin: 0;">Education Advocate & Vlogger</h2>
-            <p style="opacity: 0.6;">Spreading awareness, one journey at a time.</p>
+        <div style="text-align: center;">
+            <h2 style="font-size: 2.2rem; margin: 0; color: var(--gold);">Educator & Explorer</h2>
+            <p style="opacity: 0.7; max-width: 600px; margin: 15px auto;">
+                Combining a passion for travel with a mission for educational awareness.
+            </p>
         </div>
 
-        <div class="mission-grid">
-            <div class="mission-item">
+        <div class="grid">
+            <div class="grid-item">
                 <h3>Travel Vlogs</h3>
-                <p>Capturing the raw beauty of different places. My goal is to showcase the unseen corners of Nepal and share the joy of exploration with my followers.</p>
+                <p>I love traveling to different places and capturing small vlogs to share the beauty of our world. Every journey is a new story waiting to be told.</p>
             </div>
-            <div class="mission-item">
-                <h3>Awareness Work</h3>
-                <p>I advocate for education-friendly spaces. Being helpful and friendly isn't just a trait—it's my method for making a positive impact on the world.</p>
+            <div class="grid-item">
+                <h3>Helping & Healing</h3>
+                <p>I am an interesting, friendly, and helpful person. My goal is to spread awareness about education-friendly environments wherever I go.</p>
             </div>
         </div>
 
         <div class="contact-footer">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">Direct Contact</p>
-            <a href="tel:+9779867102729" class="phone">+977 9867102729</a>
+            <span style="letter-spacing: 3px; opacity: 0.5; font-size: 0.8rem;">GET IN TOUCH</span>
+            <a href="tel:+9779867102729" class="phone-num">+977 9867102729</a>
+            <p style="opacity: 0.6;">Available for collaborations & social awareness projects.</p>
         </div>
     </div>
 
-    <footer style="text-align: center; padding-bottom: 40px; opacity: 0.4; font-size: 0.8rem;">
-        BIBAS BISTA | GULMI, NEPAL | 2026
+    <footer style="text-align: center; padding-bottom: 50px; opacity: 0.3; font-size: 0.8rem; letter-spacing: 2px;">
+        © 2026 BIBASH BISTA | MADANE GULMI | NEPAL
     </footer>
 
 </body>
