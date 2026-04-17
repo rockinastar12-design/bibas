@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibas Bista | Traveler & Educator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #38bdf8;
+            --nature: #22c55e;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--primary);
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), 
+                        url('hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 4rem; margin: 0; letter-spacing: -2px; }
+        .hero p { font-size: 1.2rem; color: var(--accent); letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+
+        /* Content Container */
+        .container { max-width: 1100px; margin: -100px auto 50px; padding: 20px; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+        /* Card Styling */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        h2 { color: var(--accent); margin-top: 0; }
+        .tag { background: rgba(56, 189, 248, 0.2); color: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-right: 10px; }
+
+        /* Vlog Section */
+        .vlog-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #1e293b;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: 2px dashed rgba(255,255,255,0.1);
+        }
+
+        /* Contact Section */
+        .contact-bar {
+            grid-column: span 2;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(90deg, #0ea5e9, #22c55e);
+            border-radius: 30px;
+            color: var(--primary);
+        }
+
+        .contact-bar h2 { color: var(--primary); font-weight: 800; }
+        .phone-link { font-size: 2rem; text-decoration: none; color: var(--primary); font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .contact-bar { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <p>Namaste from Madane, Gulmi</p>
+        <h1>Bibas Bista</h1>
+        <div style="margin-top: 20px;">
+            <span class="tag">Traveler</span>
+            <span class="tag">Vlogger</span>
+            <span class="tag">Education Advocate</span>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>The Journey</h2>
+                <p>I am an interesting person who finds joy in the winding roads of Nepal. Traveling isn't just a hobby for me—it's how I connect with the heart of our country.</p>
+                <p>I believe in being <strong>friendly and helpful</strong> to everyone I meet on the trail. My mission is to leave every place a little better than I found it.</p>
+            </div>
+
+            <div class="card">
+                <h2>Education Awareness</h2>
+                <p>I am passionate about spreading the light of knowledge. During my travels, I advocate for <strong>education-friendly</strong> environments in rural communities.</p>
+                <p>I believe that through travel and conversation, we can inspire a generation of students in places like Gulmi and beyond.</p>
+            </div>
+
+            <div class="card" style="grid-column: span 2;">
+                <h2>Latest Vlogs</h2>
+                <p>Explore the hidden gems of Nepal through my lens. I capture the beauty of different places to show the world the magic of our home.</p>
+                <div class="vlog-placeholder">
+                    <span>🎥 Link your YouTube or TikTok videos here</span>
+                </div>
+            </div>
+
+            <div class="contact-bar">
+                <h2>Let's Connect</h2>
+                <p>Available for travel collaborations and educational projects.</p>
+                <a href="tel:+9779867102729" class="phone-link">+977 9867102729</a>
+                <br><br>
+                <a href="https://wa.me/9779867102729" style="color: black; font-weight: bold;">WhatsApp Me</a>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; opacity: 0.5;">
+        © 2026 Bibas Bista | Built for Gulmi, Travel & Education
+    </footer>
+
+</body>
+</html>
